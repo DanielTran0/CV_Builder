@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: rgb(82, 81, 81);
+}
+
+button {
+  color: white;
+  background-color: rgb(17, 139, 27);
+  padding: 5px 10px;
+  border: none;
+}
+
+.mainHeader {
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.cv {
+  border: thin solid black;
+  padding: 40px;
+  width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+/*=======
+  general
+  =======*/
+
+.general {
+  margin-bottom: 15px;
+}
+
+.general > input {
+  font-size: 30px;
+  margin-bottom: 5px;
+  color: rgb(29, 29, 206);
+}
+
+.general > h1 {
+  margin-bottom: 5px;
+  color: rgb(29, 29, 206);
+}
+
+.generalDetails {
+  display: flex;
+}
+
+.generalDetails p {
+  margin: 0 5px;
+}
+
+/*====
+  work
+  ====*/
+
+.work > h1 {
+  color: rgb(29, 29, 206);
+}
+
+.companyHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.companyHeader > input {
+  font-size: 22px;
+}
+
+.companyDate {
+  display: flex;
+}
+
+.companyDetails {
+  display: flex;
+}
+
+:is(.companyDetails, .companyHeader) span {
+  margin: 0 5px;
+}
+
+.job {
+  margin-bottom: 10px;
+}
+
+.job > textarea {
+  width: 100%;
+  height: 100px;
+}
+
+.job > :is(textarea, pre) {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+pre {
+  word-wrap: break-word;
+}
+
+@media (max-width: 1000px) {
+  .cv {
+    width: auto;
+  }
+}
+
+@media (max-width: 750px) {
+  .companyHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .generalDetails {
+    flex-direction: column;
+  }
+
+  .generalDetails span {
+    display: none;
+  }
+}
